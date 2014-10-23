@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bbs_fall14.MainActivity" >
+
+	<TextView
+	    android:id="@+id/PersonalPriorities"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/SortSetting"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="19dp"
+	    android:text="@string/Personal_Priorities"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<TextView
+	    android:id="@+id/textView1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/PersonalPriorities"
+	    android:layout_below="@+id/PersonalPriorities"
+	    android:layout_marginTop="24dp"
+	    android:text="@string/Sexual"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<TextView
+	    android:id="@+id/TextView02"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/TextView01"
+	    android:layout_below="@+id/TextView01"
+	    android:layout_marginTop="17dp"
+	    android:text="@string/Theft"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<TextView
+	    android:id="@+id/TextView01"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/textView1"
+	    android:layout_below="@+id/textView1"
+	    android:layout_marginTop="15dp"
+	    android:text="@string/Physical"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<ScrollView
+	    android:id="@+id/scrollView1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="22dp" >
+
+	</ScrollView>
+
+	<Spinner
+	    android:id="@+id/SortSetting"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/Gender"
+	    android:layout_below="@+id/Gender"
+	    android:entries="@array/SortSetting"
+	    android:prompt="@string/SortSetting"
+	    android:spinnerMode="dialog"
+	    tools:ignore="UnusedAttribute" />
+
+	<Spinner
+	    android:id="@+id/Gender"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignTop="@+id/scrollView1"
+	    android:entries="@array/gender"
+	    android:prompt="@string/Gender"
+	    android:spinnerMode="dialog"
+	    tools:ignore="UnusedAttribute" />
+
+	<EditText
+	    android:id="@+id/Physical"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/TextView01"
+	    android:layout_alignBottom="@+id/TextView01"
+	    android:layout_alignLeft="@+id/Sexual"
+	    android:ems="10"
+	    android:inputType="number" />
+
+	<EditText
+	    android:id="@+id/Theft"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/Physical"
+	    android:layout_alignTop="@+id/TextView02"
+	    android:ems="10"
+	    android:inputType="number" />
+
+	<EditText
+	    android:id="@+id/Sexual"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/TextView01"
+	    android:layout_toRightOf="@+id/TextView01"
+	    android:ems="10"
+	    android:inputType="number" />
+	
+	
+</RelativeLayout>

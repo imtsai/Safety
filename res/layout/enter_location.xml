@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1">
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Where?"
+            android:id="@+id/find" android:textSize="25dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/startLocation"
+            android:hint="Type Start Location"
+            android:autoText="false"
+            android:clickable="true"
+            android:editable="true"
+            android:inputType="text"/>
+
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/destinationLocation"
+              android:hint="Type Destination" android:autoText="false" android:clickable="true"
+              android:editable="true" android:inputType="text" android:layout_gravity="center_horizontal"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take me home safely!"
+            android:onClick="showResults"
+            android:id="@+id/button" android:layout_gravity="center_horizontal"/>
+    	
+
+</LinearLayout>
+

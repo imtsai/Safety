@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Routes we found"
+            android:id="@+id/routeFound"/>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="363dp"
+            android:id="@+id/routesFound" android:choiceMode="none"
+            android:textFilterEnabled="false"  />
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Call BearWalk"
+                android:id="@+id/bearWalk" android:layout_gravity="center_vertical"
+                android:onClick="callBearWalk"
+
+                />
+
+        <Button android:layout_width="wrap_content" android:layout_height="match_parent" android:text="   Call Uber   "
+                android:id="@+id/button5"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="     Restart     "
+                android:id="@+id/button6"/>
+    </LinearLayout>
+
+</LinearLayout>
