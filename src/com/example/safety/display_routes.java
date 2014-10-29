@@ -1,6 +1,5 @@
 package com.example.safety;
 
-<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,15 +18,17 @@ import org.apache.http.protocol.HTTP;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-=======
->>>>>>> parent of 1b465fc... fixed json object implementation
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 public class display_routes extends Activity {
 	private WebView webView;
+	String resultstring;
+	private String wurl;
+	private JSONObject jObject;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -36,28 +37,29 @@ public class display_routes extends Activity {
 		setContentView(R.layout.display_routes);
 		webView = (WebView) findViewById(R.id.webView);
 		webView.getSettings().setJavaScriptEnabled(true);
-<<<<<<< HEAD
-		try {
-			jObject = readJsonPacket();
-		} catch (ClientProtocolException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (JSONException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		try {
-			JSONArray jArray = jObject.getJSONArray("points");
-			String directions = jArray.toString();
-			resultstring = "www.google.com/maps/dir/" + directions;
-		} catch (JSONException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		webView.loadUrl(resultstring);
+//		try {
+//			jObject = readJsonPacket();
+//		} catch (ClientProtocolException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		} catch (IOException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		} catch (JSONException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+//		try {
+//			JSONArray jArray = jObject.getJSONArray("points");
+//			String directions = jArray.toString();
+//			resultstring = "www.google.com/maps/dir/" + directions;
+//		} catch (JSONException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+//		webView.loadUrl(resultstring);
+		webView.loadUrl("https://www.google.com/maps/@37.8707002,-122.2605518,17z");
+
 	}
 
 	public JSONObject readJsonPacket() throws ClientProtocolException, IOException, JSONException{
@@ -94,10 +96,7 @@ public class display_routes extends Activity {
 		}
 		return total.toString();
 	}
-=======
-		webView.loadUrl("https://goo.gl/maps/8CegB");
  
-	}
 
->>>>>>> parent of 1b465fc... fixed json object implementation
+
 }

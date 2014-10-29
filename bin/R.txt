@@ -412,8 +412,6 @@ int string route_2 0x7f0a0012
 int string route_3 0x7f0a0013
 int string route_4 0x7f0a0014
 int string route_5 0x7f0a0015
-int style AppBaseTheme 0x7f0b0092
-int style AppTheme 0x7f0b0093
 int style BabyBlueStuff 0x7f0b008d
 int style BlueStuff 0x7f0b008c
 int style CodeFont 0x7f0b008b
