@@ -18,7 +18,7 @@ public class MainActivity extends ActionBarActivity {
 
      
 
-       Intent first = new Intent(getApplicationContext(), login.class); 
+       Intent first = new Intent(getApplicationContext(), enter_location.class); 
         startActivity(first); //start login activity 
 
         
