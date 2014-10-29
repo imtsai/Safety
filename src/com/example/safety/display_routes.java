@@ -51,8 +51,9 @@ public class display_routes extends Activity {
 //		}
 //		try {
 //			JSONArray jArray = jObject.getJSONArray("points");
-//			String directions = jArray.toString();
-//			resultstring = "www.google.com/maps/dir/" + directions;
+//			resultstring = "www.google.com/maps/dir/" + cocenatePoints(jArray);
+//			try {
+//			
 //		} catch (JSONException e1) {
 //			// TODO Auto-generated catch block
 //			e1.printStackTrace();
@@ -63,10 +64,9 @@ public class display_routes extends Activity {
 	}
 
 	public JSONObject readJsonPacket() throws ClientProtocolException, IOException, JSONException{
-		JSONObject jsonobj = new JSONObject();
 		DefaultHttpClient httpclient = new DefaultHttpClient();
 		HttpPost httppostreq = new HttpPost(wurl);
-		StringEntity se = new StringEntity(jsonobj.toString());
+		StringEntity se = new StringEntity(new JSONObject().toString());
 		se.setContentType("application/json;charset=UTF-8");
 		se.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE, "application/json;charset=UTF-8"));
 		httppostreq.setEntity(se);
@@ -97,6 +97,14 @@ public class display_routes extends Activity {
 		return total.toString();
 	}
  
+	private String cocenatePoints(JSONArray jArray) throws JSONException {
+		String temp = "";
+		for (int i = 0; i <= jArray.length(); i++) {
+			temp += jArray.get(i) + "/";
+		}
+		return temp;
+		
+	}
 
 
 }
