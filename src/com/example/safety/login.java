@@ -71,13 +71,13 @@ public class login extends Activity {
       
         //check server if registered
 		startActivity(new Intent(login.this, enter_location.class));
-        login.this.finish();
+//        login.this.finish();
 		
 	}
 	
 	public void SignupProcess(View view) {
 		startActivity(new Intent(login.this, signup.class));
-        login.this.finish();
+//        login.this.finish();
 
 
 	}
