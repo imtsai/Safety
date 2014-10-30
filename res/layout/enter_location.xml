@@ -17,8 +17,7 @@
             android:autoText="false"
             android:clickable="true"
             android:editable="true"
-            android:inputType="text"
-            />
+            android:inputType="text"/>
 
     <EditText android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -30,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="Take me home safely!"
             android:onClick="showResults"
-            android:id="@+id/locationButton" android:layout_gravity="center_horizontal"/>
+            android:id="@+id/button" android:layout_gravity="center_horizontal"/>
     	
 
 </LinearLayout>
