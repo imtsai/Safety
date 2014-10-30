@@ -4,7 +4,8 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@drawable/nice_blue" >
+              android:background="@drawable/blue_background" >
+
 
     <TextView
         	style="@style/GoldStuff"
@@ -36,16 +37,18 @@
         <Button
             android:id="@+id/button5"
             style="@style/GoldStuff"
-            android:layout_width="128dp"
-            android:layout_height="78dp"
-            android:text="   Call Uber   " />
+            android:layout_width="118dp"
+            android:layout_height="72dp"
+            android:text="   NightShuttle Schedule   " 
+        	android:onClick="showShuttleSchedule" />
 
         <Button
             android:id="@+id/button6"
             style="@style/GoldStuff"
-            android:layout_width="112dp"
-            android:layout_height="match_parent"
-            android:text="   Restart     " />
+            android:layout_width="118dp"
+            android:layout_height="72dp"
+            android:text="   Restart     " 
+        	android:onClick="Restart" />
 
     </LinearLayout>
 

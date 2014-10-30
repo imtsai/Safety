@@ -4,7 +4,7 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:weightSum="1"
-              android:background="@drawable/nice_blue" >>
+              android:background="@drawable/blue_background" >>
     <TextView
         	style="@style/GreenStuff"
             android:layout_width="fill_parent"
@@ -38,6 +38,13 @@
             android:text="Take me home safely!"
             android:onClick="showResults"
             android:id="@+id/button" android:layout_gravity="center_horizontal"/>
+    <Button
+        	style="@style/GreenStuff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:onClick="settings"
+            android:id="@+id/button1" android:layout_gravity="center_horizontal"/>
     	
 
 </LinearLayout>

@@ -47,7 +47,7 @@ public class signup extends Activity {
 //    	  have it go to screen saying ___please go verify your email 
         	startActivity(new Intent(signup.this, login.class));
 
-          signup.this.finish();
+//          signup.this.finish();
 
       }
 	    
