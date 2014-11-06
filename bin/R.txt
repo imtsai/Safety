@@ -261,7 +261,6 @@ int id activity_chooser_view_content 0x7f090025
 int id always 0x7f09000f
 int id bearWalk 0x7f09004e
 int id beginning 0x7f090016
-int id button 0x7f090045
 int id button5 0x7f09004f
 int id button6 0x7f090050
 int id checkbox 0x7f09002d
@@ -290,6 +289,7 @@ int id image 0x7f090027
 int id imageView1 0x7f090040
 int id listMode 0x7f090006
 int id list_item 0x7f090029
+int id locationButton 0x7f090045
 int id login 0x7f090049
 int id loginEmail 0x7f090046
 int id loginPassword 0x7f090047

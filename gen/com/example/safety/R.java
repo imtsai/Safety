@@ -1108,7 +1108,6 @@ containing a value of this type.
         public static final int always=0x7f09000f;
         public static final int bearWalk=0x7f09004e;
         public static final int beginning=0x7f090016;
-        public static final int button=0x7f090045;
         public static final int button5=0x7f09004f;
         public static final int button6=0x7f090050;
         public static final int checkbox=0x7f09002d;
@@ -1137,6 +1136,7 @@ containing a value of this type.
         public static final int imageView1=0x7f090040;
         public static final int listMode=0x7f090006;
         public static final int list_item=0x7f090029;
+        public static final int locationButton=0x7f090045;
         public static final int login=0x7f090049;
         public static final int loginEmail=0x7f090046;
         public static final int loginPassword=0x7f090047;
