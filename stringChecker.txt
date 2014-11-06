@@ -1,0 +1,84 @@
+stringChecker = function(name){
+	//Splits sentence into multiple words 
+	var words = name.split(" ");
+	writeln(words);
+
+	//Checks for no address 
+	if (name == 'Unidentified Location')
+		return [];
+
+	if (contains(words, 'Fraternity') || contains(words, 'Fraternities')){
+		if (words.length == 1)
+			return ['Piedmont Avenue and Channing Way'];
+		if (contains(words,'A'))
+			return  ['TEST'];
+		if (contains(words, 'South'))
+			return ['Piedmont Avenue and Dwight Avenue'];
+		if (contains(words, 'North'))
+			return ['Piedmont Avenue and Bancroft Avenue'];
+	}
+
+	if (!contains(name, ',')){
+		otherWords = words;
+		for (var k = 1; k < otherWords.length; k++)
+			otherWords[0] = otherWords[0].concat(" " + otherWords[k]);
+		words = [otherWords[0]];
+	}
+
+	// If contains comma (means more than one building)
+	if (contains(name, ',')){
+		// Splits multiple buildings names in input into outputtable names (Evans Hall and Haas to
+		// Evans Hall, Haas)
+		var buildings = [];
+		var indivNames = [];
+		for (var i = 0; i < words.length; i++){
+			indivNames.push(words[i]); 
+			if (contains(words[i], ',') || i == words.length-1){
+				for (var j = 1; j<indivNames.length; j++){
+					indivNames[0] = indivNames[0].concat(" " + indivNames[j]);
+				}
+				if (contains(indivNames[indivNames.length-1], ','))
+					indivNames[0] = indivNames[0].slice(0,indivNames[0].length-1);
+				indivNames[0] = indivNames[0].slice(0,indivNames[0].length);
+				buildings.push(indivNames[0]);
+				indivNames = [];
+			}
+		}
+		words = buildings;	
+	}
+
+	if (contains(words, 'Unit')){
+		if (contains(words, 'Unit 1'))
+			words = ['2650 Durant Ave, Berkeley, CA 94704']; 
+		if (contains(words, 'Unit 2'))
+			words = ['2650 Haste Ave, Berkeley, CA 94704']; 
+		if (contains(words, 'Unit 3'))
+			words = ['2400 Durant Ave, Berkeley, CA 94704'];
+	}
+
+	// West Crescent case 
+	if (contains(words, 'West Crescent')){
+		otherWords = ['UC Berkeley West Entrance'];
+		words = otherWords;
+	}
+	return words;
+}
+
+contains = function(list, string){
+	for (var i = 0; i < list.length; i++){
+		var stringCount = 0;
+		for (var k = 0; k < string.length; k++){
+			if (string[k] == list[i][k])
+				stringCount++;
+		}
+		if (stringCount == string.length){
+			return true;	 
+		}
+	}
+	return false;
+}
+
+
+
+
+stringChecker('South Fraternity')
